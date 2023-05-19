@@ -1,4 +1,4 @@
-package model.usuario;
+package model;
 
 public class Cliente extends Usuario {
     private String nome;

@@ -1,4 +1,4 @@
-package model.usuario;
+package model;
 
 public class Endereco {
     private String rua;

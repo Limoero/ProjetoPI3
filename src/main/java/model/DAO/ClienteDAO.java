@@ -1,4 +1,4 @@
-package model.usuario.DAO;
+package model.DAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
