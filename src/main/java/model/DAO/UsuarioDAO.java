@@ -8,5 +8,6 @@ public interface UsuarioDAO {
     public void update(Object o) throws SQLException;
     public void delete(Object o) throws SQLException;
     public List<Object> read() throws SQLException;
+    public boolean validaLogin(String email, String senha) throws SQLException;
 
 }

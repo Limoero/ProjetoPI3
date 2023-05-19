@@ -6,8 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import usuario.DAO.Cliente;
-import usuario.DAO.Conexaodb;
+import model.Cliente;
+import model.Conexaodb;
 
 public class ClienteDAO implements UsuarioDAO {
     private Connection conexao;
@@ -105,6 +105,18 @@ public class ClienteDAO implements UsuarioDAO {
             stmt.close();
             return null;
         }
+        
     }
-
+    
+    @Override
+    public boolean validaLogin(String email, String senha) throws SQLException {
+        String sql = "SELECT email, senha FROM tb_usuario WHERE email = ? AND senha = ?";
+        PreparedStatement stmt = conexao.prepareStatement(sql);
+        stmt.setString(1, email);
+        stmt.setString(2, senha);
+        ResultSet rs = stmt.executeQuery();
+        
+        return false;
+        
+    }
 }
