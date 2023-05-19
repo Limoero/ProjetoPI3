@@ -129,6 +129,8 @@ public class TelaLogin extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (this.checkLogin(txtLogin.getText(),new String (txtSenha.getPassword()).toString())){
             JOptionPane.showMessageDialog(null, "Bem-Vindo usuario" + login);
+                    TelaLogada telaLog = new TelaLogada();
+                    telaLog.setVisible(true);
         } else {
             JOptionPane.showMessageDialog(null,"Dados invalidos.");
         }
